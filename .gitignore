@@ -1,0 +1,6 @@
+*~
+input/*
+output/*
+*csv
+*pkl
+__pycache__/
