@@ -3,4 +3,5 @@ input/*
 output/*
 *csv
 *pkl
+*feather
 __pycache__/
