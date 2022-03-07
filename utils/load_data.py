@@ -14,8 +14,23 @@ def read_csv(path):
     return df
 
 def load_train_data():
+    data_types_dict = {
+    'time_id': 'int32',
+    'investment_id': 'int16',
+    "target": 'float16',
+    }
+
+    features = [f'f_{i}' for i in range(300)]
+
+    for f in features:
+        data_types_dict[f] = 'float16'
+
     logger.debug('enter')
-    df = read_csv(TRAIN_DATA)
+    df = pd.read_csv(TRAIN_DATA,
+                usecols = data_types_dict.keys(),
+                dtype=data_types_dict,
+                index_col = 0)
+
     logger.debug('exit')
     return df
 
