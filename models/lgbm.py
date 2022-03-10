@@ -16,11 +16,6 @@ LOG_DIR = '../logs/'
 logger = getLogger(__name__)
 log_fmt = Formatter('%(asctime)s %(name)s %(lineno)d [%(levelname)s][%(funcName)s] %(message)s ')
 
-handler = StreamHandler()
-handler.setLevel('INFO')
-handler.setFormatter(log_fmt)
-logger.addHandler(handler)
-
 handler = FileHandler(LOG_DIR + 'lgbm.py.log',mode='w')
 handler.setLevel(DEBUG)
 handler.setFormatter(log_fmt)
@@ -84,7 +79,7 @@ for fold, (trn_idx, val_idx) in enumerate(skf.split(X=train_df, y=train_df['inve
 	logger.debug('val_pred: {}'.format(val_pred))
 
 	rmse = np.sqrt(mean_squared_error(valid[config.TARGET], val_pred))
-	logger.debug('fold: {}, rmse: {:.6f}, elapsed time: {:.2f}sec'.format(fold,rmse,elapsed))
+	logger.debug('fold: {}, rmse: {:.6f}'.format(fold,rmse))
 	models.append(model)
 
 logger.info('end')
