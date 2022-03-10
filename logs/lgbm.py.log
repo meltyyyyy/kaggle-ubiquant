@@ -1,9 +1,73 @@
-2022-03-08 15:02:07,063 __main__ 30 [INFO][<module>] start 
-2022-03-08 15:02:07,063 __main__ 47 [INFO][<module>] start loading 
-2022-03-08 15:04:16,904 __main__ 49 [INFO][<module>] train data loaded: (1601312, 302) 
-2022-03-08 15:04:19,752 __main__ 59 [INFO][<module>] fold: 0 
-2022-03-08 15:04:21,242 __main__ 63 [INFO][<module>] params: {'objective': 'regression', 'n_estimators': 1000, 'random_state': 42, 'learning_rate': 0.1, 'num_leaves': 128, 'subsample': 0.7005159699224954, 'subsample_freq': 1, 'n_jobs': -1, 'min_child_samples': 1000, 'metric': 'rmse'} 
-2022-03-08 15:04:21,242 __main__ 66 [INFO][<module>] training start 
-2022-03-08 15:39:43,971 __main__ 74 [INFO][<module>] training finished 
-2022-03-08 15:39:59,929 __main__ 84 [DEBUG][<module>] val_pred: [-0.01795649  0.05390396 -0.05813626 ...  0.11032809  0.01716926
-  0.02736943] 
+2022-03-09 10:18:05,729 __main__ 25 [INFO][<module>] start 
+2022-03-09 10:18:05,730 __main__ 42 [INFO][<module>] start loading 
+2022-03-09 10:20:30,090 __main__ 44 [INFO][<module>] train data loaded: (1601312, 302) 
+2022-03-09 10:20:33,038 __main__ 54 [INFO][<module>] fold: 0 
+2022-03-09 10:20:34,738 __main__ 58 [INFO][<module>] params: {'objective': 'regression', 'n_estimators': 1000, 'random_state': 42, 'learning_rate': 0.1, 'num_leaves': 128, 'subsample': 0.9222487802791111, 'subsample_freq': 1, 'n_jobs': -1, 'min_child_samples': 1000, 'metric': 'rmse'} 
+2022-03-09 10:20:34,738 __main__ 61 [INFO][<module>] training start 
+2022-03-09 10:59:48,314 __main__ 69 [INFO][<module>] training finished 
+2022-03-09 11:00:02,319 __main__ 79 [DEBUG][<module>] val_pred: [-0.19806145  0.03740744 -0.00455269 ...  0.04979917  0.09074798
+ -0.16391849] 
+2022-03-09 11:00:02,500 __main__ 82 [DEBUG][<module>] fold: 0, rmse: 0.868767 
+2022-03-09 11:00:02,518 __main__ 54 [INFO][<module>] fold: 1 
+2022-03-09 11:00:04,162 __main__ 58 [INFO][<module>] params: {'objective': 'regression', 'n_estimators': 1000, 'random_state': 42, 'learning_rate': 0.1, 'num_leaves': 128, 'subsample': 0.9222487802791111, 'subsample_freq': 1, 'n_jobs': -1, 'min_child_samples': 1000, 'metric': 'rmse'} 
+2022-03-09 11:00:04,163 __main__ 61 [INFO][<module>] training start 
+2022-03-09 11:38:32,110 __main__ 69 [INFO][<module>] training finished 
+2022-03-09 11:38:46,660 __main__ 79 [DEBUG][<module>] val_pred: [ 0.27316896  0.07256578  0.00773918 ... -0.01288845 -0.1003663
+ -0.33376145] 
+2022-03-09 11:38:46,664 __main__ 82 [DEBUG][<module>] fold: 1, rmse: 0.868825 
+2022-03-09 11:38:46,678 __main__ 54 [INFO][<module>] fold: 2 
+2022-03-09 11:38:47,987 __main__ 58 [INFO][<module>] params: {'objective': 'regression', 'n_estimators': 1000, 'random_state': 42, 'learning_rate': 0.1, 'num_leaves': 128, 'subsample': 0.9222487802791111, 'subsample_freq': 1, 'n_jobs': -1, 'min_child_samples': 1000, 'metric': 'rmse'} 
+2022-03-09 11:38:47,987 __main__ 61 [INFO][<module>] training start 
+2022-03-09 12:18:05,718 __main__ 69 [INFO][<module>] training finished 
+2022-03-09 12:18:21,804 __main__ 79 [DEBUG][<module>] val_pred: [0.22420388 0.03899809 0.34693349 ... 0.06148013 0.07345557 0.22628561] 
+2022-03-09 12:18:21,808 __main__ 82 [DEBUG][<module>] fold: 2, rmse: 0.875498 
+2022-03-09 12:18:21,821 __main__ 54 [INFO][<module>] fold: 3 
+2022-03-09 12:18:23,107 __main__ 58 [INFO][<module>] params: {'objective': 'regression', 'n_estimators': 1000, 'random_state': 42, 'learning_rate': 0.1, 'num_leaves': 128, 'subsample': 0.9222487802791111, 'subsample_freq': 1, 'n_jobs': -1, 'min_child_samples': 1000, 'metric': 'rmse'} 
+2022-03-09 12:18:23,107 __main__ 61 [INFO][<module>] training start 
+2022-03-09 12:57:29,668 __main__ 69 [INFO][<module>] training finished 
+2022-03-09 12:57:43,785 __main__ 79 [DEBUG][<module>] val_pred: [-0.32117313  0.45425319 -0.1585055  ...  0.20973685  0.04603245
+  0.33179966] 
+2022-03-09 12:57:43,789 __main__ 82 [DEBUG][<module>] fold: 3, rmse: 0.866925 
+2022-03-09 12:57:43,802 __main__ 54 [INFO][<module>] fold: 4 
+2022-03-09 12:57:45,107 __main__ 58 [INFO][<module>] params: {'objective': 'regression', 'n_estimators': 1000, 'random_state': 42, 'learning_rate': 0.1, 'num_leaves': 128, 'subsample': 0.9222487802791111, 'subsample_freq': 1, 'n_jobs': -1, 'min_child_samples': 1000, 'metric': 'rmse'} 
+2022-03-09 12:57:45,107 __main__ 61 [INFO][<module>] training start 
+2022-03-09 13:36:31,108 __main__ 69 [INFO][<module>] training finished 
+2022-03-09 13:36:44,924 __main__ 79 [DEBUG][<module>] val_pred: [ 0.1690883   0.13898535  0.72505588 ... -0.30470227  0.10115687
+ -0.34946849] 
+2022-03-09 13:36:44,928 __main__ 82 [DEBUG][<module>] fold: 4, rmse: 0.876346 
+2022-03-09 13:36:44,954 __main__ 54 [INFO][<module>] fold: 5 
+2022-03-09 13:36:46,263 __main__ 58 [INFO][<module>] params: {'objective': 'regression', 'n_estimators': 1000, 'random_state': 42, 'learning_rate': 0.1, 'num_leaves': 128, 'subsample': 0.9222487802791111, 'subsample_freq': 1, 'n_jobs': -1, 'min_child_samples': 1000, 'metric': 'rmse'} 
+2022-03-09 13:36:46,264 __main__ 61 [INFO][<module>] training start 
+2022-03-09 14:15:31,163 __main__ 69 [INFO][<module>] training finished 
+2022-03-09 14:15:45,430 __main__ 79 [DEBUG][<module>] val_pred: [-0.23199207 -0.80257958  0.22780365 ...  0.07686917 -0.12066682
+ -0.22337939] 
+2022-03-09 14:15:45,434 __main__ 82 [DEBUG][<module>] fold: 5, rmse: 0.872552 
+2022-03-09 14:15:45,449 __main__ 54 [INFO][<module>] fold: 6 
+2022-03-09 14:15:46,777 __main__ 58 [INFO][<module>] params: {'objective': 'regression', 'n_estimators': 1000, 'random_state': 42, 'learning_rate': 0.1, 'num_leaves': 128, 'subsample': 0.9222487802791111, 'subsample_freq': 1, 'n_jobs': -1, 'min_child_samples': 1000, 'metric': 'rmse'} 
+2022-03-09 14:15:46,777 __main__ 61 [INFO][<module>] training start 
+2022-03-09 14:54:46,816 __main__ 69 [INFO][<module>] training finished 
+2022-03-09 14:55:01,077 __main__ 79 [DEBUG][<module>] val_pred: [-0.1829793   0.29498579  0.36561492 ... -0.299231   -0.02168317
+  0.08778113] 
+2022-03-09 14:55:01,080 __main__ 82 [DEBUG][<module>] fold: 6, rmse: 0.875045 
+2022-03-09 14:55:01,093 __main__ 54 [INFO][<module>] fold: 7 
+2022-03-09 14:55:02,610 __main__ 58 [INFO][<module>] params: {'objective': 'regression', 'n_estimators': 1000, 'random_state': 42, 'learning_rate': 0.1, 'num_leaves': 128, 'subsample': 0.9222487802791111, 'subsample_freq': 1, 'n_jobs': -1, 'min_child_samples': 1000, 'metric': 'rmse'} 
+2022-03-09 14:55:02,610 __main__ 61 [INFO][<module>] training start 
+2022-03-09 15:33:55,170 __main__ 69 [INFO][<module>] training finished 
+2022-03-09 15:34:10,297 __main__ 79 [DEBUG][<module>] val_pred: [-0.09491975 -0.5511445  -0.22333633 ...  0.01721617  0.08838261
+ -0.10362028] 
+2022-03-09 15:34:10,300 __main__ 82 [DEBUG][<module>] fold: 7, rmse: 0.873278 
+2022-03-09 15:34:10,314 __main__ 54 [INFO][<module>] fold: 8 
+2022-03-09 15:34:11,604 __main__ 58 [INFO][<module>] params: {'objective': 'regression', 'n_estimators': 1000, 'random_state': 42, 'learning_rate': 0.1, 'num_leaves': 128, 'subsample': 0.9222487802791111, 'subsample_freq': 1, 'n_jobs': -1, 'min_child_samples': 1000, 'metric': 'rmse'} 
+2022-03-09 15:34:11,604 __main__ 61 [INFO][<module>] training start 
+2022-03-09 16:12:35,097 __main__ 69 [INFO][<module>] training finished 
+2022-03-09 16:12:49,104 __main__ 79 [DEBUG][<module>] val_pred: [-0.19080739 -0.1607454   0.21469668 ... -0.08766183 -0.00264266
+ -0.10324481] 
+2022-03-09 16:12:49,107 __main__ 82 [DEBUG][<module>] fold: 8, rmse: 0.876392 
+2022-03-09 16:12:49,121 __main__ 54 [INFO][<module>] fold: 9 
+2022-03-09 16:12:50,435 __main__ 58 [INFO][<module>] params: {'objective': 'regression', 'n_estimators': 1000, 'random_state': 42, 'learning_rate': 0.1, 'num_leaves': 128, 'subsample': 0.9222487802791111, 'subsample_freq': 1, 'n_jobs': -1, 'min_child_samples': 1000, 'metric': 'rmse'} 
+2022-03-09 16:12:50,435 __main__ 61 [INFO][<module>] training start 
+2022-03-09 16:51:40,497 __main__ 69 [INFO][<module>] training finished 
+2022-03-09 16:51:54,573 __main__ 79 [DEBUG][<module>] val_pred: [ 0.17945922 -0.08290398  0.27590349 ... -0.0705166  -0.36201518
+ -0.87037355] 
+2022-03-09 16:51:54,577 __main__ 82 [DEBUG][<module>] fold: 9, rmse: 0.872805 
+2022-03-09 16:51:54,577 __main__ 85 [INFO][<module>] end 
