@@ -4,6 +4,7 @@ from logging import StreamHandler, DEBUG, Formatter, FileHandler, getLogger
 
 LOG_DIR = '../logs/'
 TRAIN_DATA = '~/ubiquant/data/input/train.csv'
+TRAIN_FEATHER_DATA = '~/ubiquant/data/input/train.feather'
 TEST_DATA = '~/ubiquant/data/input/example_test.csv'
 
 logger = getLogger(__name__)
@@ -24,6 +25,12 @@ def read_csv(path):
     logger.debug('enter')
     df = pd.read_csv(path)
     logger.debug('exit')
+    return df
+
+def load_train_feather():
+    logger.info('enter')
+    df = pd.read_feather(TRAIN_FEATHER_DATA)
+    logger.info('exit')
     return df
 
 def load_train_data():
