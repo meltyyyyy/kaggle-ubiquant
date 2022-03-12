@@ -1,2 +1,2 @@
-2022-03-10 12:07:48,131 utils.load_data 51 [DEBUG][load_test_data] enter 
-2022-03-10 12:07:48,145 utils.load_data 53 [DEBUG][load_test_data] exit 
+2022-03-12 07:00:10,034 utils.load_data 26 [INFO][load_train_feather] enter 
+2022-03-12 07:00:33,448 utils.load_data 28 [INFO][load_train_feather] exit 
