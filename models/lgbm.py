@@ -2,7 +2,7 @@ import sys, os
 sys.path.append(os.pardir)
 
 from configs.lgbm_config import config
-from utils.load_data import load_train_data
+from utils.load_data import load_train_data, load_test_data
 
 import numpy as np
 import pandas as pd
@@ -81,6 +81,8 @@ for fold, (trn_idx, val_idx) in enumerate(skf.split(X=train_df, y=train_df['inve
 	rmse = np.sqrt(mean_squared_error(valid[config.TARGET], val_pred))
 	logger.debug('fold: {}, rmse: {:.6f}'.format(fold,rmse))
 	models.append(model)
+
+
 
 logger.info('end')
 
