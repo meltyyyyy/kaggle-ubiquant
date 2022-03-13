@@ -6,6 +6,8 @@ from logging import Formatter, FileHandler, getLogger
 import os, sys
 sys.path.append(os.pardir)
 from utils.load_data import load_train_feather
+from utils.get_model_summary import get_model_summary
+
 
 LOG_DIR = '../logs/'
 
@@ -102,3 +104,10 @@ def get_model():
     model.compile(optimizer=tf.optimizers.Adam(0.001), loss='mse',
                   metrics=['mse', "mae", "mape", rmse, correlation])
     return model
+
+logger.info('build model')
+model = get_model()
+logger.info('model summery:\n{}'.format(get_model_summary(model)))
+keras.utils.plot_model(model, show_shapes=True)
+
+
