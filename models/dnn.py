@@ -1,12 +1,12 @@
+import os, sys
+sys.path.append(os.pardir)
+from utils.get_model_summary import get_model_summary
+from utils.load_data import load_train_feather
 from tensorflow.python.ops import math_ops
 from tensorflow import keras
 from tensorflow.keras import layers
 import tensorflow as tf
 from logging import Formatter, FileHandler, getLogger
-import os, sys
-sys.path.append(os.pardir)
-from utils.load_data import load_train_feather
-from utils.get_model_summary import get_model_summary
 
 
 LOG_DIR = '../logs/'
@@ -50,6 +50,20 @@ def decode_function(record_bytes):
             "target": tf.io.FixedLenFeature([], dtype=tf.float32)
         }
     )
+
+
+def preprocess(item):
+    return (item["investment_id"], item["features"]), item["target"]
+
+
+def make_dataset(df, batch_size=4096, mode="train"):
+    ds = tf.data.Dataset.from_tensor_slices(df)
+    ds = ds.map(decode_function)
+    ds = ds.map(preprocess)
+    if mode == "train":
+        ds = ds.shuffle(batch_size * 4)
+    ds = ds.batch(batch_size).cache().prefetch(tf.data.AUTOTUNE)
+    return ds
 
 
 def correlation(x, y, axis=-2):
@@ -105,9 +119,12 @@ def get_model():
                   metrics=['mse', "mae", "mape", rmse, correlation])
     return model
 
+
 logger.info('build model')
 model = get_model()
 logger.info('model summery:\n{}'.format(get_model_summary(model)))
 keras.utils.plot_model(model, show_shapes=True)
 
-
+models = []
+for i in range(5):
+    

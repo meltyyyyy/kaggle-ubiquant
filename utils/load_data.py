@@ -1,11 +1,12 @@
 import pandas as pd
 
-from logging import StreamHandler, DEBUG, Formatter, FileHandler, getLogger
+from logging import Formatter, FileHandler, getLogger
 
 LOG_DIR = '../logs/'
 TRAIN_DATA = '~/ubiquant/data/input/train.csv'
 TRAIN_FEATHER_DATA = '~/ubiquant/data/input/train.feather'
-TEST_DATA = '~/ubiquant/data/input/example_test.csv'
+TEST_DATA = '~/ubiquant/data/input/test.csv'
+TEST_FEATHER_DATA = '~/ubiquant/data/input/test.feather'
 
 logger = getLogger(__name__)
 log_fmt = Formatter('%(asctime)s %(name)s %(lineno)d [%(levelname)s][%(funcName)s] %(message)s ')
@@ -46,6 +47,12 @@ def load_train_data():
                 dtype=data_types_dict,
                 index_col = 0)
 
+    logger.debug('exit')
+    return df
+
+def load_test_feather():
+    logger.debug('enter')
+    df = pd.read_feather()
     logger.debug('exit')
     return df
 
