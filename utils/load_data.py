@@ -52,7 +52,7 @@ def load_train_data():
 
 def load_test_feather():
     logger.debug('enter')
-    df = pd.read_feather()
+    df = pd.read_feather(TEST_FEATHER_DATA)
     logger.debug('exit')
     return df
 
